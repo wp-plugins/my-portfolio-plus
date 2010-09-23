@@ -28,7 +28,7 @@ class MyPortfolioPlus
 	function MyPortfolioPlus()
 	{
 		$this->pluginDir = dirname( __FILE__ );
-		$this->pluginUrl = "/wp-content/plugins/MyPortfolioPlus";
+		$this->pluginUrl = "/wp-content/plugins/my-portfolio-plus";
 		$this->templateDir = $this->pluginDir . "/views/";
 		$this->thumbGen = new AppSTW();
 		

@@ -81,6 +81,9 @@ This is version 1.0 software. Visit the plugin homepage and leave a comment if y
 
 == Changelog ==
 
+= 1.0.1 =
+* Fixed problem due to assuming wordpress would give the plugin the directory I developed it with.
+
 = 1.0 =
 * No Changes as is brand new
 
