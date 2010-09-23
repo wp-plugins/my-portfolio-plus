@@ -16,6 +16,9 @@
     </table>
 
 	<h3>Shrink The Web Details</h3>
+	<p>To use this plugin you must first register for a free account at Shrink The Web using this <a href="https://www.shrinktheweb.com/user/register" target="_blank">link</a>.</p>
+	<p>Once registered you will see the two required keys on the page immediately after signing in for the first time.</p>
+	
 	<table class="form-table">
         <tr valign="top">
         <th scope="row">STW Access Key</th>
