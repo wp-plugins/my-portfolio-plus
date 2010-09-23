@@ -4,7 +4,7 @@ Donate link: http://www.screensugar.co.uk/2010/09/my-portfolio-plus/#donate
 Tags: portfolio, project, thumbnails, web designer, web developer, designer, developer, websites, custom-post-types, plugins
 Requires at least: 3.0
 Tested up to: 3.0.1
-Stable tag: trunk
+Stable tag: 1.0.1
 
 My Portfolio Plus enables a Web Developer/Designer to create a portfolio for their work in a very easy way.
 
