@@ -4,7 +4,7 @@ Donate link: http://www.screensugar.co.uk/2010/09/my-portfolio-plus/#donate
 Tags: portfolio, project, thumbnails, web designer, web developer, designer, developer, websites, custom-post-types, plugins
 Requires at least: 3.0
 Tested up to: 3.0.1
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 
 My Portfolio Plus enables a Web Developer/Designer to create a portfolio for their work in a very easy way.
 
@@ -82,6 +82,8 @@ This is version 1.0 software. Visit the plugin homepage and leave a comment if y
 4. Platform choosing capabilities, works just like standard categories.
 
 == Changelog ==
+= 1.0.2 =
+* Added admin notice to remind users to sign up for Shrink The Web Accounts.
 
 = 1.0.1 =
 * Fixed problem due to assuming wordpress would give the plugin the directory I developed it with.

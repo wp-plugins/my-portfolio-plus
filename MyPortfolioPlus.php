@@ -4,7 +4,7 @@ Plugin Name: myPortfolio Plus
 Plugin URI: http://www.screensugar.co.uk/project/
 Description: A Portfolio driven by project post types for WordPress 3.0 and above.
 Author: Shaun Bohannon
-Version: 1.0
+Version: 1.0.2
 Author URI: http://www.screensugar.co.uk
 License: GPL2
 */
@@ -104,9 +104,33 @@ class MyPortfolioPlus
 		add_action('admin_menu', array(&$this, 'my_portfolio_menu'));
 		//Add Admin Settings
 		add_action('admin_init',  array(&$this, 'register_mysettings'));
+		//Add Admin Notices
+		add_action('admin_notices',  array(&$this, 'show_notices'));
 		
 		//Default Options
-		register_activation_hook( __FILE__, 'activate_my_portfolio' );	
+		register_activation_hook( __FILE__, 'activate_my_portfolio' );
+	}
+	
+	function admin_init() 
+	{
+		// Custom meta boxes for the edit project screen
+		add_meta_box("sugar-meta", "Project Details", array(&$this, "meta_details"), "project", "side", "low");
+	}
+	
+	function show_notices()
+	{
+		//6395cc8341c2892
+		//ae206
+		$notices = "";
+		if(get_option('wpss_stw_access') == null || get_option('wpss_stw_access') == null)
+		{
+			$notices .= "<h3>myPortfolio Plus</h3><p>The plugin will not function properly until you add the API details for Shrink The Web on the <a href='edit.php?post_type=project&page=myportfolio-options'>options page</a>.</p>";
+		}
+		
+		if ($notices != "")
+		{
+			echo "<div class='error'>".$notices."</div>";
+		}
 	}
 	
 	function activate_my_portfolio()
@@ -270,12 +294,6 @@ class MyPortfolioPlus
 			}
 		}
 		flush_rewrite_rules();
-	}
-	
-	function admin_init() 
-	{
-		// Custom meta boxes for the edit podcast screen
-		add_meta_box("sugar-meta", "Project Details", array(&$this, "meta_details"), "project", "side", "low");
 	}
 	
 	// Admin post meta contents
