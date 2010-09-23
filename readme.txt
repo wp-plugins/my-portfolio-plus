@@ -9,32 +9,32 @@ Stable tag: trunk
 My Portfolio Plus enables a Web Developer/Designer to create a portfolio for their work in a very easy way.
 
 == Description ==
-## About the Plugin ##
+= About the Plugin =
 My Portfolio Plus is a plugin designed for WordPress 3.x that enables a Web Developer/Designer to create a portfolio for their work in a very easy way that doesn’t rely on outdated methods such as custom fields and proprietary editors. The [Plugin Homepage](http://www.screensugar.co.uk/2010/09/my-portfolio-plus/) contains a full list of features.
 
 
-## Extraordinarily Simple Management ##
+= Extraordinarily Simple Management =
 Using the latest technologies offered by the newest version of WordPress, you can add a Project as you would normally add a Post or Page. The Project Edit Page is especially easy to use, as you give the Project a title as you would a standard WordPress Post along with some content to describe the work undertaken.
 
 What is unique about this plugin is that included in the editor is a series of fields to collect information regarding that project. Currently the plugin collects the URL of the site, the Client Name and the Date the project was completed.
 
-## Automatic Thumbnails ##
+= Automatic Thumbnails =
 Some say a picture is worth 1,000 words and this plugin helps you say those words with no extra effort. Using the power of Shrink The Web (Free Account Needed)  and the URL of the site that you have already entered, My Portfolio Plus will automatically retrieve a generated thumbnail of the site in question and by default will be displayed on the Projects listing page for all to see.
 
-## Live Site Preview ##
+= Live Site Preview =
 Thumbnails are great but your hard work deserves to be seen as it was intended at full size. That is why by utilising the power of colorbox, My Portfolio Plus enables the end user to click a site thumbnail and view it within a gorgeous in-place frame without ever leaving your portfolio page.
 
-## Filter by Platform ##
+= Filter by Platform =
 Using the powerful new taxonomy features of WordPress 3, I have added the ability to group projects by the platform used to develop them. For instance you could define that a project was completed using PHP, WordPress & jQuery, another using .NET & Moo Tools and finally a site using PHP, Zend Framework & Scriptaculous.
 
 While this may seem pedantic at first, the default project list template included with the plugin comes complete with a sidebar that will list all of the platforms you have defined, in the form of a tag cloud. Clicking on one of these platforms will filter the projects list to show only the projects completed using that platform, this information is available through a URL too. You can link to all of your completed WordPress projects by simply sending the link: http://your-site-url/projects/platform/wordpress/ to a potential client.
 
-##Speed Up Your Portfolio Management ##
+= Speed Up Your Portfolio Management =
 Remember, this is all available by simply providing the Name of a Website you have worked on and the URL at which it is available. Depending on the size of your project description you can add a completely new project in under 30 seconds.
 
 == Installation ==
 
-## Instructions ##
+= Instructions =
 
 1. Unzip the plugin archive
 2. Upload the entire folder MyPortfolioPlus to your plugins folder (/wp-content/plugins/)
@@ -45,7 +45,7 @@ Remember, this is all available by simply providing the Name of a Website you ha
 7. If you want to utilise Shrink the Web thumbnails, you must enter your API credentials on this page.
 8. Add a Link to http://your-site-url/projects in the main site navigation
 
-## Requirements ##
+= Requirements =
 *	Only PHP 5+ is supported, although PHP 4 may work.
 *	PHP Safe Mode is not supported, you may be able to hack it to work though
 *	WordPress 3.x + only
