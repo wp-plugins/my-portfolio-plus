@@ -1,0 +1,10 @@
+input.sugar-input
+{
+	width: 400px;
+}
+label.sugar-label
+{
+	width: 100px;
+	display: block;
+	float: left;
+}
