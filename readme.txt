@@ -13,7 +13,7 @@ My Portfolio Plus enables a Web Developer/Designer to create a portfolio for the
 My Portfolio Plus is a plugin designed for WordPress 3.x that enables a Web Developer/Designer to create a portfolio for their work in a very easy way that doesn’t rely on outdated methods such as custom fields and proprietary editors. The [Plugin Homepage](http://www.screensugar.co.uk/2010/09/my-portfolio-plus/) contains a full list of features.
 
 = Example Portfolio =
-I created this plugin to power my own portfolio, to see how this plugin works on the front end of a WordPress installation please visit [my Portfolio](http://www.screensugar.co.uk/projects/). You can see how the administration section works by looking at the provided screenshots.
+I created this plugin to power my own portfolio. The best way to see how this plugin works on the front end of a WordPress installation is to visit [my Portfolio](http://www.screensugar.co.uk/projects/). You can see how the administration section works by looking at the provided screenshots.
 
 = Extraordinarily Simple Management =
 Using the latest technologies offered by the newest version of WordPress, you can add a Project as you would normally add a Post or Page. The Project Edit Page is especially easy to use, as you give the Project a title as you would a standard WordPress Post along with some content to describe the work undertaken.
