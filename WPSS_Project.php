@@ -13,7 +13,7 @@ class WPSS_Project
 		$this->url = $url;
 		$this->date = $date;
 		$this->thumbGen = new AppSTW();
-		$this->pluginUrl = "/wp-content/plugins/MyPortfolioPlus";
+		$this->pluginUrl = "/wp-content/plugins/my-portfolio-plus";
 	}
 	
 	public static function getProject($projectID)

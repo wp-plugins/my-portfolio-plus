@@ -1,19 +1,16 @@
 <?php
 /*
 Plugin Name: myPortfolio Plus
-Plugin URI: http://www.screensugar.co.uk/project/
+Plugin URI: http://www.screensugar.co.uk/2010/09/my-portfolio-plus/
 Description: A Portfolio driven by project post types for WordPress 3.0 and above.
 Author: Shaun Bohannon
-Version: 1.0
+Version: 1.0.4
 Author URI: http://www.screensugar.co.uk
 License: GPL2
 */
 require_once("AppSTW.php");
 require_once("WPSS_Project.php");
 require_once("template-tags.php");
-
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 
 class MyPortfolioPlus
 {
@@ -28,7 +25,7 @@ class MyPortfolioPlus
 	function MyPortfolioPlus()
 	{
 		$this->pluginDir = dirname( __FILE__ );
-		$this->pluginUrl = "/wp-content/plugins/MyPortfolioPlus";
+		$this->pluginUrl = "/wp-content/plugins/my-portfolio-plus";
 		$this->templateDir = $this->pluginDir . "/views/";
 		$this->thumbGen = new AppSTW();
 		
@@ -104,9 +101,43 @@ class MyPortfolioPlus
 		add_action('admin_menu', array(&$this, 'my_portfolio_menu'));
 		//Add Admin Settings
 		add_action('admin_init',  array(&$this, 'register_mysettings'));
+		//Add Admin Notices
+		add_action('admin_notices',  array(&$this, 'show_notices'));
 		
 		//Default Options
-		register_activation_hook( __FILE__, 'activate_my_portfolio' );	
+		register_activation_hook( __FILE__, 'activate_my_portfolio' );
+	}
+	
+	function admin_init() 
+	{
+		// Custom meta boxes for the edit project screen
+		add_meta_box("sugar-meta", "Project Details", array(&$this, "meta_details"), "project", "side", "low");
+	}
+	
+	function show_notices()
+	{
+		//6395cc8341c2892
+		//ae206
+		$notices = "";
+		
+		//Checks to ensure STW details are entered in Options Page
+		if(get_option('wpss_stw_access') == null || get_option('wpss_stw_access') == null)
+		{
+			$notices .= "<p>The plugin will not function properly until you add the API details for Shrink The Web on the <a href='edit.php?post_type=project&page=myportfolio-options'>options page</a>.</p>";
+		}
+		
+		//Checks that Thumbnail Directory is writeable
+		if(!$this->is__writable($this->thumbGen->thumbDir))
+		{
+			$notices .= "<p>Thumbnail Directory is not writeable. This directory should be created automatically when the plugin is activated. Try re-activating the plugin, and then check if your thumbnail directory is writable 'uploads/webimages'</p>";
+		}
+		
+		if ($notices != "")
+		{
+			echo "<div class='error'><h3>myPortfolio Plus Errors</h3>".$notices."</div>";
+		}
+		
+		
 	}
 	
 	function activate_my_portfolio()
@@ -272,12 +303,6 @@ class MyPortfolioPlus
 		flush_rewrite_rules();
 	}
 	
-	function admin_init() 
-	{
-		// Custom meta boxes for the edit podcast screen
-		add_meta_box("sugar-meta", "Project Details", array(&$this, "meta_details"), "project", "side", "low");
-	}
-	
 	// Admin post meta contents
 	function meta_details()
 	{
@@ -305,6 +330,24 @@ class MyPortfolioPlus
 			return $this->thumbGen->thumbUri.$imageSrc;
 		else
 			return $this->pluginUrl."/img/noimage.png";
+	}
+	
+	//Checks folder is writable
+	function is__writable($path) 
+	{
+	    if ($path{strlen($path)-1}=='/') // recursively return a temporary file path
+	        return $this->is__writable($path.uniqid(mt_rand()).'.tmp');
+	    else if (is_dir($path))
+	        return $this->is__writable($path.'/'.uniqid(mt_rand()).'.tmp');
+	    // check tmp file for read/write capabilities
+	    $rm = file_exists($path);
+	    $f = @fopen($path, 'a');
+	    if ($f===false)
+	        return false;
+	    fclose($f);
+	    if (!$rm)
+	        unlink($path);
+	    return true;
 	}
 	
 }
