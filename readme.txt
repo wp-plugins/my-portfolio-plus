@@ -4,7 +4,7 @@ Donate link: http://www.screensugar.co.uk/2010/09/my-portfolio-plus/#donate
 Tags: portfolio, project, thumbnails, web designer, web developer, designer, developer, websites, custom-post-types, plugins, wordpress portfolio
 Requires at least: 3.0
 Tested up to: 3.0.1
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 
 My Portfolio Plus enables a Web Developer/Designer to create a Wordpress Portfolio for their work in a very easy way.
 
@@ -85,6 +85,9 @@ This is version 1.0 software. Visit the plugin homepage and leave a comment if y
 4. Platform choosing capabilities, works just like standard categories.
 
 == Changelog ==
+= 1.0.6 =
+* Fixed bug that stopped plugin from functioning within ran in a subfolder of the webserver
+
 = 1.0.5 =
 * Added support for Default Wordpress URL's, just use ?page_id=projects instead of /projects
 
