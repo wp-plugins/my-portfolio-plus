@@ -1,0 +1,61 @@
+@import "colorbox.css";
+.clear{ clear: both; }
+.left{float:left;}
+.right{float:right;}
+
+.one-column #content
+{
+	margin: 0;
+	width: auto;
+	padding:;
+	margin: 0 2em;
+}
+
+div.entry-project
+{
+	float: left;
+	margin: 15px 15px;
+}
+div.entry-project img, div.project-quick img
+{
+	border: 1px solid #ccc;
+	height: 200px!important;
+	width: 260px!important;
+	-webkit-box-shadow:0 0 15px #bbb;
+	-moz-box-shadow: 0 0 15px #bbb; 
+	box-shadow:0 0 15px #bbb; 
+}
+div.entry-project img:hover, div.project-quick img:hover
+{
+	-webkit-box-shadow:0 0 35px #999;
+	-moz-box-shadow: 0 0 35px #999; 
+	box-shadow:0 0 35px #999; 
+}
+
+div.project-info
+{ 
+	clear: left;
+	margin: 1em 0;
+}
+div.project-quick
+{ 
+	float: left; width: 360px;
+}
+div.project-quick img
+{
+	margin-bottom: 1em;
+}
+div.project-quick p
+{
+	line-height: 1.5em;
+}
+.project-description
+{ 
+	float: left; width: 300px;
+}
+span.project-attr
+{
+	display: block;
+	float: left;
+	width: 60px;
+}
