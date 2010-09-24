@@ -4,16 +4,13 @@ Plugin Name: myPortfolio Plus
 Plugin URI: http://www.screensugar.co.uk/2010/09/my-portfolio-plus/
 Description: A Portfolio driven by project post types for WordPress 3.0 and above.
 Author: Shaun Bohannon
-Version: 1.0.3
+Version: 1.0.4
 Author URI: http://www.screensugar.co.uk
 License: GPL2
 */
 require_once("AppSTW.php");
 require_once("WPSS_Project.php");
 require_once("template-tags.php");
-
-error_reporting(E_ALL);
-ini_set('display_errors', '1');
 
 class MyPortfolioPlus
 {
