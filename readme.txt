@@ -1,16 +1,16 @@
 === Plugin Name ===
 Contributors: sbohan
 Donate link: http://www.screensugar.co.uk/2010/09/my-portfolio-plus/#donate
-Tags: portfolio, project, thumbnails, web designer, web developer, designer, developer, websites, custom-post-types, plugins
+Tags: portfolio, project, thumbnails, web designer, web developer, designer, developer, websites, custom-post-types, plugins, wordpress portfolio
 Requires at least: 3.0
 Tested up to: 3.0.1
-Stable tag: 1.0.4
+Stable tag: 1.0.5
 
-My Portfolio Plus enables a Web Developer/Designer to create a portfolio for their work in a very easy way.
+My Portfolio Plus enables a Web Developer/Designer to create a Wordpress Portfolio for their work in a very easy way.
 
 == Description ==
 = About the Plugin =
-My Portfolio Plus is a plugin designed for WordPress 3.x that enables a Web Developer/Designer to create a portfolio for their work in a very easy way that doesn’t rely on outdated methods such as custom fields and proprietary editors. The [Plugin Homepage](http://www.screensugar.co.uk/2010/09/my-portfolio-plus/) contains a full list of features.
+My Portfolio Plus is a plugin designed for WordPress 3.x that enables a Web Developer/Designer to create a Wordpress Portfolio for their work in a very easy way that doesn’t rely on outdated methods such as custom fields and proprietary editors. The [Plugin Homepage](http://www.screensugar.co.uk/2010/09/my-portfolio-plus/) contains a full list of features.
 
 = Example Portfolio =
 I created this plugin to power my own portfolio. The best way to see how this plugin works on the front end of a WordPress installation is to visit [my Portfolio](http://www.screensugar.co.uk/projects/). You can see how the administration section works by looking at the provided screenshots.
@@ -62,6 +62,9 @@ http://www.screensugar.co.uk/2010/09/my-portfolio-plus/
 
 == Frequently Asked Questions ==
 
+= I'm getting 404 errors for my project links =
+Should this occur, the easiest solution to this is to visit the permalinks section of your Wordpress admin. This will flush your permalinks settings and should make the site realise the Portfolio plugin is installed.
+
 = I'm not a web designer but wish to use this Plugin =
 
 In a future version I will be making the plugin more generic in nature to accommodate all kinds of portfolios, such as; Graphic Design, literature, architecture and many other types of creative projects. I will also very soon be releasing an update for fellow programmers that extends support to software. Whether it be an Open Source Library, an iPhone App, a Desktop App or even a Wordpress Plugin!
@@ -82,6 +85,9 @@ This is version 1.0 software. Visit the plugin homepage and leave a comment if y
 4. Platform choosing capabilities, works just like standard categories.
 
 == Changelog ==
+= 1.0.5 =
+* Added support for Default Wordpress URL's, just use ?page_id=projects instead of /projects
+
 = 1.0.4 =
 * Removed setting all errors on, really sorry about that!
 

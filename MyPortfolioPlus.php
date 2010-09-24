@@ -244,8 +244,8 @@ class MyPortfolioPlus
 				die();
 			}
 		}
-		if (array_key_exists("pagename", $wp->query_vars) &&
-			$wp->query_vars["pagename"] == "projects")
+		if ((array_key_exists("pagename", $wp->query_vars) && $wp->query_vars["pagename"] == "projects") ||
+			(array_key_exists("page_id", $wp->query_vars) && $wp->query_vars["page_id"] == "projects"))
 		{
 			if( '' == locate_template( array( 'portfolio/projects.php' ), true ) ) 
 			{	
